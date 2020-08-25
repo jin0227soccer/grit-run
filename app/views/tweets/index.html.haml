@@ -1,0 +1,46 @@
+.Main
+  .Main__visual
+    .Main__visual__content
+      .Main__visual__content__subtitle
+        継続できるランニングアプリ
+      .Main__visual__content__text
+        GRIT-RUNはモチベーションを維持できる
+        %BR ランニングアプリです
+      .Main__visual__content__icon
+        .Main__visual__content__icon__aBtn
+          = link_to image_tag("apple.svg", class:"App_img"), "/"
+        .Main__visual__content__icon__gBtn
+          = link_to image_tag("google.svg", class:"Google_img"), "/"
+  
+  .Main__features
+    .Main__features__head
+      GRIT-RUNの特徴
+    .Main__features__items
+      .Main__features__items__item
+        .Main__features__items__item__img
+          = link_to image_tag("runnig-icon.png", class:"Features_img"), "/"
+        .Main__features__items__item__subtitle
+          簡単にシェア
+        .Main__features__items__item__detail
+          スマホひとつで、いつでもどこでも簡単にシェア！
+      .Main__features__items__item
+        .Main__features__items__item__img
+          = link_to image_tag("ranking.png", class:"Features_img"), "/"
+        .Main__features__items__item__subtitle
+          走行距離のランキング表示
+        .Main__features__items__item__detail
+          ランキングが表示されるので
+          %BR モチベーション高く取り組める！
+      .Main__features__items__item
+        .Main__features__items__item__img
+          = link_to image_tag("good.png", class:"Features_img"), "/"
+        .Main__features__items__item__subtitle
+          いいね機能で応援し合える
+        .Main__features__items__item__detail
+          いいね機能で応援してもらえる！
+
+.contents.row
+  - @tweets.each do |tweet|
+    .content_post{:style => "background-image: url(#{tweet.image});"}
+      %p= tweet.distance
+      %span.name

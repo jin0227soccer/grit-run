@@ -2,10 +2,19 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title GritRun
+    %title GRIT-RUN
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header.header
+      .header__bar.row
+        %h1.grid-6
+          %a{:href => "/"} GRIT-RUN
+        .user_nav.grid-6
+          %a.post{:href => "/tweets/new"} 投稿する
     = yield
+    %footer
+      %p
+        Copyright GRIT-RUN 2020.
