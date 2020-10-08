@@ -1,8 +1,7 @@
 .contents.row
   .container
+    %h3 編集する
     = form_with(model: @tweet, local: true) do |form|
-      %h3 投稿する
       = form.text_field :image, placeholder: "Image Url"
       = form.text_field :distance, placeholder: "Distance"
-      -# = form.text_area :text, placeholder: "text", rows: "10"
-      = form.submit "投稿する"
+      = form.submit "SEND"
