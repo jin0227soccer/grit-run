@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'tweets#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :tweets, only: [:index, :new, :create, :destroy, :edit, :update]
+  resources :tweets
 end
